@@ -21,6 +21,7 @@ $.get('../data/page-1.json', data => {
   });
   makeAnimalKeywords(animalArray);
   appendKeywordOptions(keywords);
+  select();
 });
 
 // create clone of animal section
@@ -30,7 +31,10 @@ let makeAnimalSection = (ele) => {
   section.children('img').attr('src', ele.image_url);
   section.children('img').attr('alt', ele.title);
   section.children('p').append(ele.description);
+  section.attr('data-id',ele.keyword);
+  //jQuery
   $('main').append(section);
+
 };
 
 // create array of keywords
@@ -53,4 +57,19 @@ let appendKeywordOptions = (keywords) => {
     $('select').append(`<option value="${el}">${el}</option>`);
   });
 };
+//select options
+let select = () =>{
+  $('select').on('change',(event)=>{
+    console.log(event.target.value);
+    let photos = $('section');
+    console.log(photos);
+    $.each(photos, (index, value) => {
+      console.log(value);
+      $(value).show();
+      if($(value).attr('data-id') !== event.target.value){
 
+        $(value).hide();
+      }
+    });
+  });
+};
