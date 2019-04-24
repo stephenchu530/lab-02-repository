@@ -24,9 +24,21 @@ Estimate of time needed to complete: 30min
 
 Start time: 10:30am
 
-Finish time: _____
+Finish time: 11:30am
 
-Actual time needed to complete: _____
+Actual time needed to complete: 60min
+```
+
+```
+Number and name of feature: feature03
+
+Estimate of time needed to complete: 30min
+
+Start time: 11:30am
+
+Finish time: 12:00pm
+
+Actual time needed to complete: 30min
 ```
 
 ## Installation:
