@@ -13,7 +13,7 @@ let AnimalObj = function(filePath, title, descript, keyword, horns) {
 };
 
 // Load data from JSON, instance objects, and populate HTML
-$.get('../../data/page-1.json', data => {
+$.get('data/page-1.json', data => {
   data.forEach(ele => {
     new AnimalObj(ele.image_url, ele.title, ele.description, ele.keyword, ele.horns);
 
