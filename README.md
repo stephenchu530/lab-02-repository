@@ -5,6 +5,19 @@ This lab
 
 ## Time Estimate
 ```
+Number and name of feature: feature01
+
+Estimate of time needed to complete: 30min
+
+Start time: 9:00am
+
+Finish time: 10:30am
+
+Actual time needed to complete: 90min
+```
+
+
+```
 Number and name of feature: feature02
 
 Estimate of time needed to complete: 30min
@@ -44,6 +57,8 @@ lab-02-repository
 ```
 
 ## Credits:
+* Saurav Kadariya, [skadariya](https://github.com/skadariya)
+* Levi Porter, [levibrooke](https://github.com/levibrooke)
 * Stephen Chu, [stephenchu530](https://github.com/stephenchu530)
 
 ## License:
