@@ -1,0 +1,74 @@
+body {
+  max-width: 80%;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* header nav */
+header {
+  height: 80px;
+  background-color: lightblue;
+  border: none;
+  border-radius: 2px;
+  margin-bottom: 40px;
+}
+
+header > * {
+  display: inline-block;
+}
+
+header h1 {
+  float: left;
+  margin: 26px 40px;
+}
+
+header select {
+  float: right;
+  margin: 31px 40px;
+}
+
+main {
+  height: auto;
+}
+
+/* grid */
+section {
+  width: calc(50% - 20px);
+  float: left;
+  margin-bottom: 40px;
+}
+
+section:nth-of-type(odd) {
+  margin-left: 20px;
+}
+
+section:nth-of-type(even) {
+  margin-right: 20px;
+  clear: both;
+}
+
+section > * {
+  margin-bottom: 20px;
+}
+
+section h2 {
+  font-family: 'Roboto', sans-serif;
+  color: #777;
+}
+
+section p {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* footer */
+footer {
+  clear: both;
+  height: 40px;
+  background-color: lightgrey;
+  border: none;
+  border-radius: 2px;
+  margin-top: 40px;
+  padding: 12px 0px;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+}
