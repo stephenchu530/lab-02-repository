@@ -16,11 +16,60 @@ let AnimalObj = function(filePath, title, descript, keyword, horns) {
 $.get('../data/page-1.json', data => {
   data.forEach(ele => {
     new AnimalObj(ele.image_url, ele.title, ele.description, ele.keyword, ele.horns);
-    const section = $('#photo-template').clone();
-    section.children('h2').append(ele.title);
-    section.children('img').attr('src', ele.image_url);
-    section.children('img').attr('alt', ele.title);
-    section.children('p').append(ele.description);
-    $('main').append(section);
+
+    makeAnimalSection(ele);
   });
+  makeAnimalKeywords(animalArray);
+  appendKeywordOptions(keywords);
+  select();
 });
+
+// create clone of animal section
+let makeAnimalSection = (ele) => {
+  const section = $('#photo-template').clone();
+  section.children('h2').append(ele.title);
+  section.children('img').attr('src', ele.image_url);
+  section.children('img').attr('alt', ele.title);
+  section.children('p').append(ele.description);
+  section.attr('data-id',ele.keyword);
+  //jQuery
+  $('main').append(section);
+
+};
+
+// create array of keywords
+const keywords = [];
+
+// check if already exists
+let makeAnimalKeywords = (arr) => {
+
+  arr.forEach(el => {
+    if (!keywords.includes(el.keyword)) {
+      keywords.push(el.keyword);
+    }
+  });
+  console.log('keywords', keywords);
+};
+
+// append keyword options
+let appendKeywordOptions = (keywords) => {
+  keywords.forEach(el => {
+    $('select').append(`<option value="${el}">${el}</option>`);
+  });
+};
+//select options
+let select = () =>{
+  $('select').on('change',(event)=>{
+    console.log(event.target.value);
+    let photos = $('section');
+    console.log(photos);
+    $.each(photos, (index, value) => {
+      console.log(value);
+      $(value).show();
+      if($(value).attr('data-id') !== event.target.value){
+
+        $(value).hide();
+      }
+    });
+  });
+};

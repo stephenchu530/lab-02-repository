@@ -3,6 +3,19 @@
 ## Description:
 This lab
 
+## Time Estimate
+```
+Number and name of feature: feature02
+
+Estimate of time needed to complete: 30min
+
+Start time: 10:30am
+
+Finish time: _____
+
+Actual time needed to complete: _____
+```
+
 ## Installation:
 From the terminal, run one of the following to make a local copy:
 * ssh: `git clone git@github.com:stephenchu530/lab-02-repository.git`
