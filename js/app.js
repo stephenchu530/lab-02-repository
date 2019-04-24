@@ -20,6 +20,7 @@ $.get('../data/page-1.json', data => {
     makeAnimalSection(ele);
   });
   makeAnimalKeywords(animalArray);
+  appendKeywordOptions(keywords);
 });
 
 // create clone of animal section
@@ -46,4 +47,10 @@ let makeAnimalKeywords = (arr) => {
   console.log('keywords', keywords);
 };
 
+// append keyword options
+let appendKeywordOptions = (keywords) => {
+  keywords.forEach(el => {
+    $('select').append(`<option value="${el}">${el}</option>`);
+  });
+};
 
