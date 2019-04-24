@@ -12,6 +12,24 @@ From the terminal, run one of the following to make a local copy:
 * Change directory into the project directory and load `index.html` in your favorite browser.
 * Or go to: [LAB-02](https://stephenchu530.github.io/lab-02-repository/)
 
+## Directory Structure:
+```sh
+lab-02-repository
+├── css
+│   ├── base.css
+│   ├── layouts.css
+│   ├── modules.css
+│   └── reset.css
+├── data
+│   └── page-1.json
+├── index.html
+├── js
+│    └── app.js
+├── .eslintrc.json
+├── .gitignore
+└── README.md
+```
+
 ## Credits:
 * Stephen Chu, [stephenchu530](https://github.com/stephenchu530)
 
