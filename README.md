@@ -1,7 +1,10 @@
 # Lab 02: jQuery Selectors and Events
 
 ## Description:
-This lab
+This lab is a collaborative project that display a photo gallery using jquery. There are 3 features that need to be implemented:
+* Display Images
+* Filter Images
+* Style the Applications
 
 ## Time Estimate
 ```
