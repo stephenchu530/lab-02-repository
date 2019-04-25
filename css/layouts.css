@@ -29,26 +29,22 @@ header select {
 
 main {
   height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
 }
 
-/* grid */
-section {
-  width: calc(50% - 20px);
-  float: left;
-  margin-bottom: 40px;
-}
-
-section:nth-of-type(odd) {
-  margin-left: 20px;
-}
-
-section:nth-of-type(even) {
-  margin-right: 20px;
-  clear: both;
-}
-
-section > * {
+/* Flex */
+section{
+  width: 200px;
+  height: 200px;
   margin-bottom: 20px;
+  /* margin-right: 10px; */
+}
+img{
+  max-height: 120px ;
+  max-width: 120px;
 }
 
 section h2 {
