@@ -6,7 +6,7 @@ This lab is a collaborative project that display a photo gallery using jquery. T
 * Filter Images
 * Style the Applications
 
-## Time Estimate
+## Time Estimate Day 00
 ```
 Number and name of feature: feature01
 
@@ -44,6 +44,52 @@ Finish time: 12:00pm
 Actual time needed to complete: 30min
 ```
 
+## Time Estimate Day 01
+```
+Number and name of feature: feature01
+
+Estimate of time needed to complete: 60min
+
+Start time: 9:00am
+
+Finish time: 10:00am
+
+Actual time needed to complete: 60min
+```
+```
+Number and name of feature: feature02
+
+Estimate of time needed to complete: 60min
+
+Start time: 10:00am
+
+Finish time: 11:00am
+
+Actual time needed to complete: 60min
+```
+```
+Number and name of feature: feature03
+
+Estimate of time needed to complete: 60min
+
+Start time: 11:00am
+
+Finish time: 12:00pm
+
+Actual time needed to complete: 60min
+```
+```
+Number and name of feature: feature04
+
+Estimate of time needed to complete: 60min
+
+Start time: 12:00pm
+
+Finish time: 13:00pm
+
+Actual time needed to complete: 60min
+```
+
 ## Installation:
 From the terminal, run one of the following to make a local copy:
 * ssh: `git clone git@github.com:stephenchu530/lab-02-repository.git`
@@ -63,6 +109,7 @@ lab-02-repository
 │   └── reset.css
 ├── data
 │   └── page-1.json
+│   └── page-2.json
 ├── index.html
 ├── js
 │    └── app.js
