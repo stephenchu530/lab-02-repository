@@ -16,7 +16,6 @@ let AnimalObj = function(filePath, title, descript, keyword, horns) {
 
 // Load data from JSON, instance objects, and populate HTML
 const pageLoad = (dataFile) =>{
-  
   $.get(dataFile, data => {
     //to save the previous template
     let section = $('#photo-template').clone();
@@ -34,14 +33,10 @@ const pageLoad = (dataFile) =>{
 
 // create clone of animal section
 let makeAnimalSection = (ele) => {
-  const section = $('#photo-template').clone();
-  section.children('h2').append(ele.title);
-  section.children('img').attr('src', ele.image_url);
-  section.children('img').attr('alt', ele.title);
-  section.children('p').append(ele.description);
-  section.attr('data-id',ele.keyword);
-  //jQuery
-  $('main').append(section);
+  let source = $('#image-template').text();
+  let imageTemplate = Handlebars.compile(source);
+  let html = imageTemplate({keyword: ele.keyword, title: ele.title, imgURL: ele.image_url, description: ele.description});
+  $('main').append(html);
 };
 
 
@@ -64,14 +59,10 @@ let appendKeywordOptions = (keywords) => {
 //select options
 let select = () =>{
   $('select').on('change',(event)=>{
-    console.log(event.target.value);
     let photos = $('section');
-    console.log(photos);
     $.each(photos, (index, value) => {
-      console.log(value);
       $(value).show();
       if($(value).attr('data-id') !== event.target.value){
-
         $(value).hide();
       }
     });
@@ -80,12 +71,8 @@ let select = () =>{
 
 pageLoad('data/page-1.json');
 $('#pages').on('click', (event)=>{
-  console.log(keywords);
-  console.log(animalArray);
   keywords=[];
   animalArray=[];
-  console.log(keywords);
-  console.log(animalArray);
   if(event.target.id==='page1'){
     pageLoad('data/page-1.json');
   }
@@ -93,4 +80,3 @@ $('#pages').on('click', (event)=>{
     pageLoad('data/page-2.json');
   }
 });
-
