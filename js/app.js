@@ -1,7 +1,9 @@
 'use strict';
 
 // Animal Array
-const animalArray = [];
+let animalArray = [];
+// create array of keywords
+let keywords = [];
 
 let AnimalObj = function(filePath, title, descript, keyword, horns) {
   this.filePath = filePath;
@@ -13,16 +15,22 @@ let AnimalObj = function(filePath, title, descript, keyword, horns) {
 };
 
 // Load data from JSON, instance objects, and populate HTML
-$.get('data/page-1.json', data => {
-  data.forEach(ele => {
-    new AnimalObj(ele.image_url, ele.title, ele.description, ele.keyword, ele.horns);
-
-    makeAnimalSection(ele);
+const pageLoad = (dataFile) =>{
+  
+  $.get(dataFile, data => {
+    //to save the previous template
+    let section = $('#photo-template').clone();
+    //deleting the rendered values and creating fresh template
+    $('main').empty().append(section);
+    data.forEach(ele => {
+      new AnimalObj(ele.image_url, ele.title, ele.description, ele.keyword, ele.horns);
+      makeAnimalSection(ele);
+    });
+    makeAnimalKeywords(animalArray);
+    appendKeywordOptions(keywords);
+    select();
   });
-  makeAnimalKeywords(animalArray);
-  appendKeywordOptions(keywords);
-  select();
-});
+};
 
 // create clone of animal section
 let makeAnimalSection = (ele) => {
@@ -34,25 +42,21 @@ let makeAnimalSection = (ele) => {
   section.attr('data-id',ele.keyword);
   //jQuery
   $('main').append(section);
-
 };
 
-// create array of keywords
-const keywords = [];
 
 // check if already exists
 let makeAnimalKeywords = (arr) => {
-
   arr.forEach(el => {
     if (!keywords.includes(el.keyword)) {
       keywords.push(el.keyword);
     }
   });
-  console.log('keywords', keywords);
 };
 
 // append keyword options
 let appendKeywordOptions = (keywords) => {
+  $('select').empty();
   keywords.forEach(el => {
     $('select').append(`<option value="${el}">${el}</option>`);
   });
@@ -73,3 +77,20 @@ let select = () =>{
     });
   });
 };
+
+pageLoad('data/page-1.json');
+$('#pages').on('click', (event)=>{
+  console.log(keywords);
+  console.log(animalArray);
+  keywords=[];
+  animalArray=[];
+  console.log(keywords);
+  console.log(animalArray);
+  if(event.target.id==='page1'){
+    pageLoad('data/page-1.json');
+  }
+  else{
+    pageLoad('data/page-2.json');
+  }
+});
+
