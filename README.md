@@ -74,20 +74,20 @@ Estimate of time needed to complete: 60min
 
 Start time: 10:50am
 
-Finish time: 12:00pm
+Finish time: 11:10pm
 
-Actual time needed to complete: 60min
+Actual time needed to complete: 20min
 ```
 ```
 Number and name of feature: feature04
 
 Estimate of time needed to complete: 60min
 
-Start time: 12:00pm
+Start time: 11:10am
 
-Finish time: 13:00pm
+Finish time: 11:30pm
 
-Actual time needed to complete: 60min
+Actual time needed to complete: 20min
 ```
 
 ## Installation:

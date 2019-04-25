@@ -4,11 +4,14 @@
 let animalArray = [];
 // create array of keywords
 let keywords = [];
+// Sort Option
+let sort = 'name';
+let page = 'page1';
 
 let AnimalObj = function(filePath, title, descript, keyword, horns) {
-  this.filePath = filePath;
+  this.image_url = filePath;
   this.title = title;
-  this.descript = descript;
+  this.description = descript;
   this.keyword = keyword;
   this.horns = horns;
   animalArray.push(this);
@@ -23,8 +26,18 @@ const pageLoad = (dataFile) =>{
     $('main').empty().append(section);
     data.forEach(ele => {
       new AnimalObj(ele.image_url, ele.title, ele.description, ele.keyword, ele.horns);
+    });
+
+    if (sort === 'name') {
+      animalArray.sort((a, b) => a.title.localeCompare(b.title));
+    } else {
+      animalArray.sort((a, b) => a.horns - b.horns);
+    }
+
+    animalArray.forEach(ele => {
       makeAnimalSection(ele);
     });
+
     makeAnimalKeywords(animalArray);
     appendKeywordOptions(keywords);
     select();
@@ -74,9 +87,22 @@ $('#pages').on('click', (event)=>{
   keywords=[];
   animalArray=[];
   if(event.target.id==='page1'){
+    page = 'page1';
     pageLoad('data/page-1.json');
   }
   else{
+    page = 'page2';
+    pageLoad('data/page-2.json');
+  }
+});
+
+$('#sort').on('click', (event) => {
+  sort = event.target.id;
+  keywords=[];
+  animalArray=[];
+  if (page === 'page1') {
+    pageLoad('data/page-1.json');
+  } else {
     pageLoad('data/page-2.json');
   }
 });
