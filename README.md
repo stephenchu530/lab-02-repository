@@ -41,6 +41,54 @@ Finish time: 12:00pm
 Actual time needed to complete: 30min
 ```
 
+```
+Number and name of feature: feature04
+
+Estimate of time needed to complete: 60min
+
+Start time: 9:00am
+
+Finish time: 10:00pm
+
+Actual time needed to complete: 60min
+```
+
+```
+Number and name of feature: feature05
+
+Estimate of time needed to complete: 60min
+
+Start time: 10:00am
+
+Finish time: 11:00am
+
+Actual time needed to complete: 60min
+```
+
+```
+Number and name of feature: feature06
+
+Estimate of time needed to complete: 60min
+
+Start time: 11:00am
+
+Finish time: 12:00pm
+
+Actual time needed to complete: 60min
+```
+
+```
+Number and name of feature: feature07
+
+Estimate of time needed to complete: 60min
+
+Start time: 12:00pm
+
+Finish time: 13:00pm
+
+Actual time needed to complete: 60min
+```
+
 ## Installation:
 From the terminal, run one of the following to make a local copy:
 * ssh: `git clone git@github.com:stephenchu530/lab-02-repository.git`
@@ -60,6 +108,7 @@ lab-02-repository
 │   └── reset.css
 ├── data
 │   └── page-1.json
+│   └── page-2.json
 ├── index.html
 ├── js
 │    └── app.js
