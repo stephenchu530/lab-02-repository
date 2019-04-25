@@ -6,7 +6,7 @@ This lab is a collaborative project that display a photo gallery using jquery. T
 * Filter Images
 * Style the Applications
 
-## Time Estimate Day 00
+## Time Estimate Day 01
 ```
 Number and name of feature: feature01
 
@@ -44,7 +44,7 @@ Finish time: 12:00pm
 Actual time needed to complete: 30min
 ```
 
-## Time Estimate Day 01
+## Time Estimate Day 02
 ```
 Number and name of feature: feature01
 
@@ -63,16 +63,16 @@ Estimate of time needed to complete: 60min
 
 Start time: 10:00am
 
-Finish time: 11:00am
+Finish time: 10:40am
 
-Actual time needed to complete: 60min
+Actual time needed to complete: 40min
 ```
 ```
 Number and name of feature: feature03
 
 Estimate of time needed to complete: 60min
 
-Start time: 11:00am
+Start time: 10:50am
 
 Finish time: 12:00pm
 
